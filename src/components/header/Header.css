@@ -1,0 +1,37 @@
+.login_form {
+  display: flex;
+  flex-flow: column;
+  border: aliceblue dotted 1px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.login_form > input:nth-child(n) {
+  margin-bottom: 1rem;
+}
+
+.header {
+  /* display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  width: 100vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 30px;
+  padding-right: 15px;
+  padding-left: 15px; */
+}
+
+.hamburguer_menu {
+  /* margin-left: 2rem; */
+}
+
+#logo,
+#loginIcon {
+  /* margin-right: 2rem; */
+  position: relative;
+  align-self: center;
+}
