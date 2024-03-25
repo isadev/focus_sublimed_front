@@ -3,11 +3,7 @@ import "./Header.css";
 import Login from "./login/Login";
 import logoPng from "./login/images/logo.png";
 import loginIcon from "./login/images/login_icon.png";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
+import { Navbar, Nav, Row, Col, Image, Container } from "react-bootstrap";
 
 function Header() {
   const [jwt, setJwt] = useState("");
@@ -18,41 +14,22 @@ function Header() {
   };
 
   return (
-    // <div className="pos-f-t">
-    //   <div className="collapse" id="navbarToggleExternalContent">
-    //     <div className="bg-dark p-4">
-    //       <h5 className="text-white h4">Collapsed content</h5>
-    //       <span className="text-muted">Toggleable via the navbar brand.</span>
-    //     </div>
-    //   </div>
-    //   <nav className="navbar navbar-dark bg-dark">
-    //     <button
-    //       className="navbar-toggler"
-    //       type="button"
-    //       data-toggle="collapse"
-    //       data-target="#navbarToggleExternalContent"
-    //       aria-controls="navbarToggleExternalContent"
-    //       aria-expanded="false"
-    //       aria-label="Toggle navigation"
-    //     >
-    //       <span className="navbar-toggler-icon"></span>
-    //     </button>
-    //   </nav>
-    // </div>
     <Container fluid>
       <Row>
-        <Col xs={4}>
-          <nav className="navbar navbar-dark bg-dark">
-            <button className="navbar-toggler">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-          </nav>
-          {/* <a className="hamburguer_menu">Hamburguer</a> */}
+        <Col md={{ order: "2" }}>
+          <Navbar collapseOnSelect expand="md">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse className="separate-items">
+              <li>About us</li>
+              <li>FAQs</li>
+              <li>Contact us</li>
+            </Navbar.Collapse>
+          </Navbar>
         </Col>
-        <Col xs={4} className="text-center">
+        <Col md={{ order: "1" }} className="text-center">
           <Image id="logo" src={logoPng} alt="logo" height="15px" />
         </Col>
-        <Col xs={4} className="text-end">
+        <Col md={{ order: "3" }} className="text-end">
           <Image id="loginIcon" src={loginIcon} alt="loginIcon" roundedCircle />
         </Col>
       </Row>
