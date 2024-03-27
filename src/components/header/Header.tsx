@@ -7,39 +7,53 @@ import { Navbar, Nav, Row, Col, Image, Container } from "react-bootstrap";
 
 function Header() {
   const [jwt, setJwt] = useState("");
+  const [hideLogin, setHideLogin] = useState(true);
 
   const saveJwtLogin = (jwt: string) => {
     console.log(`El jwt ${jwt}`);
     setJwt(jwt);
   };
 
+  const handleClickLogin = () => {
+    setHideLogin(!hideLogin ? true : false);
+  };
+
   return (
     <Container fluid>
-      <Row>
+      <Row className="header__principal_row">
+        {/* Hamburguer menu */}
         <Col md={{ order: "2" }}>
           <Navbar collapseOnSelect expand="md">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse className="separate-items">
+            <Navbar.Collapse className="header__space_evenly">
               <li>About us</li>
               <li>FAQs</li>
               <li>Contact us</li>
             </Navbar.Collapse>
           </Navbar>
         </Col>
-        <Col md={{ order: "1" }} className="text-center">
+
+        {/* Logo */}
+        <Col md={{ order: "1" }} className="text-left">
           <Image id="logo" src={logoPng} alt="logo" height="15px" />
         </Col>
+
+        {/* Sign in */}
         <Col md={{ order: "3" }} className="text-end">
-          <Image id="loginIcon" src={loginIcon} alt="loginIcon" roundedCircle />
+          <label htmlFor="sign_in">
+            Sign in
+            <Image
+              id="loginIcon"
+              src={loginIcon}
+              alt="loginIcon"
+              roundedCircle
+              onClick={() => handleClickLogin()}
+            />
+          </label>
         </Col>
       </Row>
-      {/* <div className="header"> */}
-      {/* Hamburguer menu */}
-      {/* Logo */}
-      {/* Sign in */}
 
-      {/* <Login saveJwt={saveJwtLogin} /> */}
-      {/* </div> */}
+      {!hideLogin ? <Login saveJwt={saveJwtLogin} /> : ""}
     </Container>
   );
 }

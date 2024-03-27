@@ -1,13 +1,12 @@
-.login_form {
+.login {
   display: flex;
   flex-flow: column;
-  border: aliceblue dotted 1px;
+  align-items: center;
+}
+
+.login_form {
   margin: 1rem;
   padding: 1rem;
   border-radius: 5px;
-  background-color: aliceblue;
-}
-
-.login_form > input:nth-child(n) {
-  margin-bottom: 1rem;
+  min-width: 70vw;
 }
