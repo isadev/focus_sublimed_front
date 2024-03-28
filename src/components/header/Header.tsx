@@ -19,7 +19,7 @@ function Header() {
   };
 
   return (
-    <Container fluid>
+    <>
       <Row className="header__principal_row">
         {/* Hamburguer menu */}
         <Col md={{ order: "2" }}>
@@ -54,7 +54,7 @@ function Header() {
       </Row>
 
       {!hideLogin ? <Login saveJwt={saveJwtLogin} /> : ""}
-    </Container>
+    </>
   );
 }
 

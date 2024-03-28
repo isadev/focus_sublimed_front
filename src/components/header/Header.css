@@ -5,9 +5,12 @@
 
 #logo,
 #loginIcon {
-  margin-left: 1rem;
   position: relative;
   align-self: center;
+}
+
+#logoIcon {
+  margin-left: 1rem;
 }
 
 li {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Social-media.css";
 import { DescriptionBlock, DescriptionLabels } from "../Footer";
-import { Image, Col } from "react-bootstrap";
+import { Image, Col, Row } from "react-bootstrap";
 
 const imagesWithLink = (labelText: DescriptionLabels) => {
   return (
@@ -13,15 +13,11 @@ const imagesWithLink = (labelText: DescriptionLabels) => {
 
 function SocialMediaBlock({ labels }: DescriptionBlock) {
   return (
-    <>
+    <Row>
       {labels.map((labelText: DescriptionLabels) => {
-        return (
-          <Col xs={1} style={{ textAlign: "center" }}>
-            {imagesWithLink(labelText)}
-          </Col>
-        );
+        return <Col xs={2}>{imagesWithLink(labelText)}</Col>;
       })}
-    </>
+    </Row>
   );
 }
 

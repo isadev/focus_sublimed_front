@@ -76,7 +76,14 @@ const socialMedia = [
 
 function Footer() {
   return (
-    <Container fluid>
+    <div
+      style={{
+        display: "block",
+        position: "absolute",
+        bottom: "3px",
+        width: "inherit",
+      }}
+    >
       <Row
         row-cols-1
         row-cols-sm-2
@@ -92,10 +99,12 @@ function Footer() {
           </Col>
         ))}
         {socialMedia.map((social) => (
-          <SocialMediaBlock labels={social.labels}></SocialMediaBlock>
+          <Col lg={{ offset: 4 }}>
+            <SocialMediaBlock labels={social.labels}></SocialMediaBlock>
+          </Col>
         ))}
       </Row>
-    </Container>
+    </div>
   );
 }
 
