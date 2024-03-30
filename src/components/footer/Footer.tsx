@@ -1,110 +1,123 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import { Row, Col, Container } from "react-bootstrap";
-import FooterBlocks from "./footer-blocks/Footer-blocks";
+import { Row, Col, Image, Container } from "react-bootstrap";
 import {
   locationIcon,
   phoneIcon,
   mailIcon,
-  facebookcon,
+  facebookIcon,
   instagramIcon,
   twitterIcon,
 } from "./images";
-import SocialMediaBlock from "./social-media/Social-media";
-
-export interface DescriptionLabels {
-  text?: string;
-  icon?: string;
-  link?: string;
-  joinLinkImg?: boolean;
-}
-
-export interface DescriptionBlock {
-  sectionTitle?: string;
-  labels: Array<DescriptionLabels>;
-}
-
-const sections: Array<DescriptionBlock> = [
-  {
-    sectionTitle: "Information",
-    labels: [
-      { text: "My order" },
-      { text: "Refunds" },
-      { text: "Returns" },
-      { text: "FAQ" },
-    ],
-  },
-  {
-    sectionTitle: "Contact us",
-    labels: [
-      { text: "Panama", icon: locationIcon },
-      { text: "11225565", icon: phoneIcon },
-      { text: "example@mail.com", icon: mailIcon },
-    ],
-  },
-  {
-    sectionTitle: "Working time",
-    labels: [
-      { text: "Monday to Friday: 8 am - 8 pm" },
-      { text: "Saturday: 8 am - 3 pm" },
-      { text: "Sunday: closed" },
-    ],
-  },
-];
-
-const socialMedia = [
-  {
-    labels: [
-      {
-        icon: facebookcon,
-        link: "https://facebook.com/focus_sublimed",
-        joinLinkImg: true,
-      },
-      {
-        icon: instagramIcon,
-        link: "https://instagram.com/focus_sublimed",
-        joinLinkImg: true,
-      },
-      {
-        icon: twitterIcon,
-        link: "https://twitter.com/focus_sublimed",
-        joinLinkImg: true,
-      },
-    ],
-  },
-];
 
 function Footer() {
   return (
-    <div
-      style={{
-        display: "block",
-        position: "absolute",
-        bottom: "3px",
-        width: "inherit",
-      }}
-    >
-      <Row
-        row-cols-1
-        row-cols-sm-2
-        row-cols-md-3
-        /* style={{ position: "fixed", bottom: 0 }} */
-      >
-        {sections.map((section) => (
-          <Col sm={12} md={6} lg={4}>
-            <FooterBlocks
-              labels={section.labels}
-              sectionTitle={section.sectionTitle}
-            ></FooterBlocks>
-          </Col>
-        ))}
-        {socialMedia.map((social) => (
-          <Col lg={{ offset: 4 }}>
-            <SocialMediaBlock labels={social.labels}></SocialMediaBlock>
-          </Col>
-        ))}
+    <>
+      <Row className="footer__principal_row" xs={1} sm={2} md={3}>
+        {/* Information */}
+        <Col
+          className="footer__principal_row__col_section"
+          sm={12}
+          md={6}
+          lg={4}
+        >
+          <Row style={{ flexDirection: "column" }}>
+            <Col>
+              <h3>Information</h3>
+              <span>My order</span>
+            </Col>
+            <Col>
+              <span>Refunds</span>
+            </Col>
+            <Col>
+              <span>Returns</span>
+            </Col>
+
+            <Col>
+              <span>FAQ</span>
+            </Col>
+          </Row>
+        </Col>
+
+        {/* Contact us */}
+        <Col
+          className="footer__principal_row__col_section"
+          sm={12}
+          md={6}
+          lg={4}
+        >
+          <Row style={{ flexDirection: "column" }}>
+            <Col>
+              <h3>Contact us</h3>
+              <Image src={locationIcon}></Image>
+              <span>Panama</span>
+            </Col>
+            <Col>
+              <Image src={phoneIcon}></Image>
+              <span>11225565</span>
+            </Col>
+            <Col>
+              <Image src={mailIcon}></Image>
+              <span>example@mail.com</span>
+            </Col>
+          </Row>
+        </Col>
+
+        {/* Working Time */}
+        <Col
+          className="footer__principal_row__col_section"
+          sm={12}
+          md={6}
+          lg={4}
+        >
+          <Row style={{ flexDirection: "column" }}>
+            <Col>
+              <h3>Working time</h3>
+              <span>Monday to Friday: 8 am - 8 pm</span>
+            </Col>
+            <Col>
+              <span>Saturday: 8 am - 3 pm</span>
+            </Col>
+            <Col>
+              <span>Sunday: closed</span>
+            </Col>
+          </Row>
+        </Col>
+
+        {/* Social Media */}
+        <Col sm={12} md={6} lg={{ span: 12 }}>
+          <Row className="footer__social_media">
+            <Col xs={2} lg={1}>
+              <a
+                aria-label="facebook"
+                href="https://facebook.com/focus_sublimed"
+                target="_blank"
+              >
+                <Image src={facebookIcon}></Image>
+              </a>
+            </Col>
+            <Col xs={2} lg={1}>
+              <a
+                aria-label="twitter"
+                href="https://twitter.com/focus_sublimed"
+                target="_blank"
+              >
+                <Image src={twitterIcon}></Image>
+              </a>
+            </Col>
+            <Col xs={2} lg={1}>
+              <a
+                aria-label="instagram"
+                href="https://instagram.com/focus_sublimed"
+                target="_blank"
+              >
+                <Image src={instagramIcon}></Image>
+              </a>
+            </Col>
+          </Row>
+        </Col>
       </Row>
-    </div>
+    </>
   );
 }
 

@@ -1,5 +1,26 @@
+.footer__principal_row {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__principal_row__col_section {
+  margin-bottom: 1.5rem;
+}
 @media (min-width: 768px) {
   .header__space_evenly {
     justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__social_media {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer__social_media {
+    justify-content: center;
   }
 }
