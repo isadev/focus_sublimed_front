@@ -121,10 +121,10 @@ function Footer() {
 
         {/* Copyright */}
         <Row className="footer__second_row" xs={1} lg={2}>
-          <Col xm={12} lg={{ span: 6 }}>
+          <Col xm={12} lg={{ span: 6 }} style={{ textAlign: "start" }}>
             <span>© 2024 Focus ecommerce. All Rights Reserved</span>
           </Col>
-          <Col xm={12} lg={{ span: 6 }}>
+          <Col xm={12} lg={{ span: 6 }} style={{ textAlign: "end" }}>
             <Image alt="payWithVisa" src={visaIcon}></Image>
             <Image alt="payWithMastercard" src={mastercardIcon}></Image>
           </Col>

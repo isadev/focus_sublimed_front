@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./Login.css";
-
+import { loginApi } from "../../api/user";
 interface LoginProps {
   saveJwt: (jwt: string) => void;
 }
@@ -12,19 +11,8 @@ function Login(props: LoginProps) {
 
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const params = {
-      method: "POST",
-      url: "http://localhost:3000/login",
-      data: {
-        username,
-        password,
-      },
-    };
-    await axios(params).then((res) => {
-      console.log(res);
-      props.saveJwt(res.data);
-      return;
-    });
+    const jwtToken = await loginApi(username, password);
+    props.saveJwt(jwtToken);
     setUsername("");
     setPassword("");
   };
