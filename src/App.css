@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.text-paragraph {
+  background: #73838c;
+}
+
+.text-title {
+  background: #2e3438;
+}

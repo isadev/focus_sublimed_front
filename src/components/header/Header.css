@@ -1,0 +1,24 @@
+.header__principal_row {
+  align-items: center;
+  min-height: 3.5rem;
+}
+
+#logo,
+#loginIcon {
+  position: relative;
+  align-self: center;
+}
+
+#logoIcon {
+  margin-left: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .header__space_evenly {
+    justify-content: space-evenly;
+  }
+}
