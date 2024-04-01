@@ -4,6 +4,8 @@ import mailIcon from "./mail.png";
 import facebookIcon from "./fb.png";
 import instagramIcon from "./ig.png";
 import twitterIcon from "./tw.png";
+import visaIcon from "./visa.png";
+import mastercardIcon from "./mastercard.png";
 
 export {
   locationIcon,
@@ -12,4 +14,6 @@ export {
   facebookIcon,
   instagramIcon,
   twitterIcon,
+  visaIcon,
+  mastercardIcon,
 };

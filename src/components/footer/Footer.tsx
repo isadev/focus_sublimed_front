@@ -8,6 +8,8 @@ import {
   facebookIcon,
   instagramIcon,
   twitterIcon,
+  mastercardIcon,
+  visaIcon,
 } from "./images";
 
 function Footer() {
@@ -49,15 +51,15 @@ function Footer() {
           <Row style={{ flexDirection: "column" }}>
             <Col>
               <h3>Contact us</h3>
-              <Image src={locationIcon}></Image>
+              <Image alt="contactUs" src={locationIcon}></Image>
               <span>Panama</span>
             </Col>
             <Col>
-              <Image src={phoneIcon}></Image>
+              <Image alt="callUs" src={phoneIcon}></Image>
               <span>11225565</span>
             </Col>
             <Col>
-              <Image src={mailIcon}></Image>
+              <Image alt="mailUs" src={mailIcon}></Image>
               <span>example@mail.com</span>
             </Col>
           </Row>
@@ -93,7 +95,7 @@ function Footer() {
                 href="https://facebook.com/focus_sublimed"
                 target="_blank"
               >
-                <Image src={facebookIcon}></Image>
+                <Image alt="facebookPage" src={facebookIcon}></Image>
               </a>
             </Col>
             <Col xs={2} lg={1}>
@@ -102,7 +104,7 @@ function Footer() {
                 href="https://twitter.com/focus_sublimed"
                 target="_blank"
               >
-                <Image src={twitterIcon}></Image>
+                <Image alt="twitterPage" src={twitterIcon}></Image>
               </a>
             </Col>
             <Col xs={2} lg={1}>
@@ -111,11 +113,22 @@ function Footer() {
                 href="https://instagram.com/focus_sublimed"
                 target="_blank"
               >
-                <Image src={instagramIcon}></Image>
+                <Image alt="instagramPage" src={instagramIcon}></Image>
               </a>
             </Col>
           </Row>
         </Col>
+
+        {/* Copyright */}
+        <Row className="footer__second_row" xs={1} lg={2}>
+          <Col xm={12} lg={{ span: 6 }}>
+            <span>© 2024 Focus ecommerce. All Rights Reserved</span>
+          </Col>
+          <Col xm={12} lg={{ span: 6 }}>
+            <Image alt="payWithVisa" src={visaIcon}></Image>
+            <Image alt="payWithMastercard" src={mastercardIcon}></Image>
+          </Col>
+        </Row>
       </Row>
     </>
   );
