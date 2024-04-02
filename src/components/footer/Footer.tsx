@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
-import { Row, Col, Image, Container } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import {
   locationIcon,
   phoneIcon,
@@ -10,12 +10,18 @@ import {
   twitterIcon,
   mastercardIcon,
   visaIcon,
-} from "./images";
+  logoIcon,
+} from "../api/images";
 
 function Footer() {
   return (
-    <>
-      <Row className="footer__principal_row" xs={1} sm={2} md={3}>
+    <div className="footer__principal_row">
+      <Row style={{ textAlign: "center" }}>
+        <Col>
+          <Image src={logoIcon} alt="logo" />
+        </Col>
+      </Row>
+      <Row xs={1} sm={2} md={3}>
         {/* Information */}
         <Col
           className="footer__principal_row__col_section"
@@ -25,18 +31,18 @@ function Footer() {
         >
           <Row style={{ flexDirection: "column" }}>
             <Col>
-              <h3>Information</h3>
-              <span>My order</span>
+              <p className="p-semi">Information</p>
+              <span className="span-small-normal">My order</span>
             </Col>
             <Col>
-              <span>Refunds</span>
+              <span className="span-small-normal">Refunds</span>
             </Col>
             <Col>
-              <span>Returns</span>
+              <span className="span-small-normal">Returns</span>
             </Col>
 
             <Col>
-              <span>FAQ</span>
+              <span className="span-small-normal">FAQ</span>
             </Col>
           </Row>
         </Col>
@@ -50,17 +56,29 @@ function Footer() {
         >
           <Row style={{ flexDirection: "column" }}>
             <Col>
-              <h3>Contact us</h3>
-              <Image alt="contactUs" src={locationIcon}></Image>
-              <span>Panama</span>
+              <p className="p-semi">Contact us</p>
+              <Image
+                style={{ paddingRight: ".5em" }}
+                alt="contactUs"
+                src={locationIcon}
+              ></Image>
+              <span className="span-small-normal">Panama</span>
             </Col>
             <Col>
-              <Image alt="callUs" src={phoneIcon}></Image>
-              <span>11225565</span>
+              <Image
+                style={{ paddingRight: ".5em" }}
+                alt="callUs"
+                src={phoneIcon}
+              ></Image>
+              <span className="span-small-normal">11225565</span>
             </Col>
             <Col>
-              <Image alt="mailUs" src={mailIcon}></Image>
-              <span>example@mail.com</span>
+              <Image
+                style={{ paddingRight: ".5em" }}
+                alt="mailUs"
+                src={mailIcon}
+              ></Image>
+              <span className="span-small-normal">example@mail.com</span>
             </Col>
           </Row>
         </Col>
@@ -74,14 +92,16 @@ function Footer() {
         >
           <Row style={{ flexDirection: "column" }}>
             <Col>
-              <h3>Working time</h3>
-              <span>Monday to Friday: 8 am - 8 pm</span>
+              <p className="p-semi">Working time</p>
+              <span className="span-small-normal">
+                Monday to Friday: 8 am - 8 pm
+              </span>
             </Col>
             <Col>
-              <span>Saturday: 8 am - 3 pm</span>
+              <span className="span-small-normal">Saturday: 8 am - 3 pm</span>
             </Col>
             <Col>
-              <span>Sunday: closed</span>
+              <span className="span-small-normal">Sunday: closed</span>
             </Col>
           </Row>
         </Col>
@@ -94,6 +114,7 @@ function Footer() {
                 aria-label="facebook"
                 href="https://facebook.com/focus_sublimed"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Image alt="facebookPage" src={facebookIcon}></Image>
               </a>
@@ -103,6 +124,7 @@ function Footer() {
                 aria-label="twitter"
                 href="https://twitter.com/focus_sublimed"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Image alt="twitterPage" src={twitterIcon}></Image>
               </a>
@@ -112,6 +134,7 @@ function Footer() {
                 aria-label="instagram"
                 href="https://instagram.com/focus_sublimed"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Image alt="instagramPage" src={instagramIcon}></Image>
               </a>
@@ -120,17 +143,24 @@ function Footer() {
         </Col>
 
         {/* Copyright */}
-        <Row className="footer__second_row" xs={1} lg={2}>
-          <Col xm={12} lg={{ span: 6 }} style={{ textAlign: "start" }}>
-            <span>© 2024 Focus ecommerce. All Rights Reserved</span>
+        <Row
+          className="footer__second_row"
+          xs={1}
+          lg={2}
+          style={{ textAlign: "center" }}
+        >
+          <Col xm={12} lg={{ span: 6 }}>
+            <span className="right-reserved span-small-semi">
+              © 2024 Focus ecommerce. All Rights Reserved
+            </span>
           </Col>
-          <Col xm={12} lg={{ span: 6 }} style={{ textAlign: "end" }}>
+          <Col xm={12} lg={{ span: 6 }}>
             <Image alt="payWithVisa" src={visaIcon}></Image>
             <Image alt="payWithMastercard" src={mastercardIcon}></Image>
           </Col>
         </Row>
       </Row>
-    </>
+    </div>
   );
 }
 

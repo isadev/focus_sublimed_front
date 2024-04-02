@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import Login from "./login/Login";
-import logoPng from "./login/images/logo.png";
-import loginIcon from "./login/images/login_icon.png";
+import { logoIcon, loginIcon } from "../api/images";
 import { Navbar, Nav, Row, Col, Image, Container } from "react-bootstrap";
 
 function Header() {
@@ -19,8 +18,8 @@ function Header() {
   };
 
   return (
-    <>
-      <Row className="header__principal_row">
+    <div className="header__principal_row">
+      <Row className="mx-0">
         {/* Hamburguer menu */}
         <Col md={{ order: "2" }}>
           <Navbar collapseOnSelect expand="md">
@@ -35,7 +34,7 @@ function Header() {
 
         {/* Logo */}
         <Col md={{ order: "1" }} className="text-left">
-          <Image id="logo" src={logoPng} alt="logo" height="15px" />
+          <Image id="logo" src={logoIcon} alt="logo" height="15px" />
         </Col>
 
         {/* Sign in */}
@@ -54,7 +53,7 @@ function Header() {
       </Row>
 
       {!hideLogin ? <Login saveJwt={saveJwtLogin} /> : ""}
-    </>
+    </div>
   );
 }
 

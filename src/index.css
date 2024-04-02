@@ -1,9 +1,56 @@
 :root {
   --bs-body-font-family: "Manrope" !important;
+
   --principal-color: #7922a5;
   --second-color: #e4d3ed;
-  --principal-text-color: #2a2a2a;
-  --second-text-color: #73838c;
+
+  --title-color: #2e3438;
+  --title-second-color: #f9fafa;
+  --no-title-color: #73838c;
+  --background-input-color: #f4f5f6;
+
+  font-size: 14px !important;
+}
+
+h1 {
+  font: normal normal bold 5em /108% "Kumbh Sans" !important;
+}
+
+h2 {
+  font: normal normal bold 3.4em /72% "Kumbh Sans" !important;
+}
+
+h3 {
+  font: normal normal bold 1.7em /36% "Kumbh Sans" !important;
+}
+
+nav {
+  font: normal normal 600 1.1em /29% "Kumbh Sans" !important;
+}
+
+.section {
+  font: normal normal 600 1em /21% "Kumbh Sans" !important;
+}
+
+.p-normal,
+.span-normal {
+  font: normal normal normal 1.1em /29% "Manrope" !important;
+}
+
+.p-semi {
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.p-small-normal,
+.span-small-normal {
+  font: normal normal 400 1em /29% "Manrope" !important;
+}
+
+.p-small-semi,
+.span-small-semi {
+  font: normal normal 600 1em /29% "Manrope" !important;
 }
 
 .principal-btn {

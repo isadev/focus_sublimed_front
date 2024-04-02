@@ -1,14 +1,15 @@
-h3 {
-  color: var(--principal-text-color);
-}
-span {
-  color: var(--second-text-color);
+/* Xs by default */
+p {
+  color: var(--title-color);
+  margin-bottom: 0.3em;
 }
 
-.footer__principal_row {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+span {
+  color: var(--no-title-color);
+}
+
+.right-reserved {
+  color: var(--title-color);
 }
 
 .footer__second_row {
@@ -23,20 +24,44 @@ span {
 .footer__principal_row__col_section {
   margin-bottom: 1.5rem;
 }
+
+.footer__principal_row {
+  background-color: var(--background-input-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.footer__social_media {
+  justify-content: center;
+  text-align: center;
+}
+
+.footer__principal_row img {
+  text-align: center;
+}
+
+/* sm */
 @media (min-width: 768px) {
   .header__space_evenly {
     justify-content: space-evenly;
   }
-}
-
-@media (max-width: 767px) {
   .footer__social_media {
-    justify-content: center;
+    justify-content: left;
+    text-align: left;
   }
 }
 
+/* Md and so on */
 @media (min-width: 992px) {
   .footer__social_media {
     justify-content: center;
+    text-align: center;
+  }
+  .footer__second_row .col-lg-6:first-child {
+    text-align: start;
+  }
+  .footer__second_row .col-lg-6:last-child {
+    text-align: end;
   }
 }

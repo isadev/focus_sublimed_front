@@ -10,3 +10,8 @@
 .text-title {
   background: #2e3438;
 }
+
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

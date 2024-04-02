@@ -1,6 +1,8 @@
 .header__principal_row {
   align-items: center;
   min-height: 3.5rem;
+  background-color: #FFF;
+  align-content: center;
 }
 
 #logo,
