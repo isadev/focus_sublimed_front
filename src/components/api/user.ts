@@ -4,10 +4,11 @@ export const loginApi = async (username: string, password: string) => {
   try {
     const params = {
       method: "POST",
-      url: "http://localhost:3000/login",
+      url: "http://localhost:3000/api/features/3/comments",
       data: {
         username,
         password,
+        body: "un ocomentarion desde react",
       },
     };
     return await axios(params).then((res) => {

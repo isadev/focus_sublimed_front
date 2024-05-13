@@ -1,0 +1,45 @@
+.image-container {
+  width: 690px;
+  height: 360px;
+}
+
+.btn-container {
+  position: absolute;
+  top: 18rem;
+}
+
+.img-text-subtitle {
+  color: var(--title-color);
+  position: absolute;
+  top: 11rem;
+  line-height: 1.8rem !important;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  /* text-shadow: 2px 2px 4px #10654a; */
+}
+
+.img-text-title {
+  color: var(--principal-color);
+  position: absolute;
+  top: 7rem;
+  text-align: center;
+}
+
+.img-over-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    width: auto;
+    height: 360px;
+  }
+
+  .img-over-container {
+    position: relative;
+    display: flex;
+    justify-content: left;
+  }
+}

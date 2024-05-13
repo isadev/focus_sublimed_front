@@ -9,26 +9,29 @@
   --no-title-color: #73838c;
   --background-input-color: #f4f5f6;
 
+  /* bootstrap colors */
+  --bs-body-bg: #f9fafa !important;
+
   font-size: 14px !important;
 }
 
-h1 {
+.font-high {
   font: normal normal bold 5em /108% "Kumbh Sans" !important;
 }
 
-h2 {
+.font-mid {
   font: normal normal bold 3.4em /72% "Kumbh Sans" !important;
 }
 
-h3 {
+.font-low {
   font: normal normal bold 1.7em /36% "Kumbh Sans" !important;
 }
 
-nav {
+.font-nav {
   font: normal normal 600 1.1em /29% "Kumbh Sans" !important;
 }
 
-.section {
+.font-section {
   font: normal normal 600 1em /21% "Kumbh Sans" !important;
 }
 
@@ -54,27 +57,31 @@ nav {
 }
 
 .principal-btn {
-  width: Hug (78px) px;
-  height: Fixed (32px) px;
+  width: 78px;
+  height: 32px;
   top: 20px;
   left: 20px;
   padding: 10px 16px 10px 16px;
   gap: 10px;
   border-radius: 6px 0px 0px 0px;
-  opacity: 0px;
-  background: var(--principal-color);
+  background: var(--principal-color) !important;
+  border-color: var(--principal-color) !important;
 }
 
 .second-btn {
-  width: Hug (78px) px;
-  height: Fixed (32px) px;
+  width: 78px;
+  height: 32px;
   top: 20px;
   left: 20px;
   padding: 10px 16px 10px 16px;
   gap: 10px;
   border-radius: 6px 0px 0px 0px;
-  opacity: 0px;
-  background: var(--second-color);
+  background: var(--second-color) !important;
+  border-color: var(--background-input-color) !important;
+}
+
+.transparent-bg {
+  background: transparent !important;
 }
 
 body {

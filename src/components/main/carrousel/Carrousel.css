@@ -1,0 +1,11 @@
+.image-container {
+  width: 690px;
+  height: 360px;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    width: auto;
+    height: 360px;
+  }
+}

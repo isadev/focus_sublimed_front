@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import SuccessCase from "./ImageCarousel";
+import ImageContainer from "./ImageContainer";
 
 test("renders learn react link", () => {
-  /* render(<SuccessCase />); */
+  /* render(<ImageContainer />); */
   /* const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument(); */
 });

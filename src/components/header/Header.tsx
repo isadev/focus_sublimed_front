@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import Login from "./login/Login";
 import { logoIcon, loginIcon } from "../api/images";
-import { Navbar, Nav, Row, Col, Image, Container } from "react-bootstrap";
+import { Navbar, Row, Col, Image } from "react-bootstrap";
 
 function Header() {
   const [jwt, setJwt] = useState("");
@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <div className="header__principal_row">
-      <Row className="mx-0">
+      <Row className="mx-0" style={{ alignItems: "center" }}>
         {/* Hamburguer menu */}
         <Col md={{ order: "2" }}>
           <Navbar collapseOnSelect expand="md">
